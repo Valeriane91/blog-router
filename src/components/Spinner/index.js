@@ -2,7 +2,7 @@
 import React from 'react';
 
 // == Import
-import './styles.scss';
+import './spinner.scss';
 
 // == Composant
 const Spinner = () => <div className="spinner" />;

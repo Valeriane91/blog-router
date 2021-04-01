@@ -2,7 +2,7 @@
 import React from 'react';
 
 // == Import
-import './styles.scss';
+import './notFound.scss;
 
 // == Composant
 const NotFound = () => <div className="not-found">404</div>;

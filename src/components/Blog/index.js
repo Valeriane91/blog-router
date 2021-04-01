@@ -12,18 +12,30 @@ import postsData from 'src/data/posts';
 import './styles.scss';
 
 // == Composant
-const Blog = () => {
-  console.log(categoriesData);
-  console.log(postsData);
 
-  return (
-    <div className="blog">
-      <Header />
-      <Posts />
-      <Footer />
-    </div>
-  );
-};
+class Blog extends React.Component {
+  constructor(props) {
+    super(props);
 
-// == Export
+    // on stocke les tâches à afficher dans le state, la valeur initiale est
+    // le tableau qui est dans le fichier de données
+    this.state = {
+      posts: '',
+      //categories: categories,
+    };
+  }
+
+  // la méthode render retourne le JSX du composant
+  render() {
+    const { posts, categories } = this.state;
+
+    return (
+      <div className="blog">
+        <Header catagories={categories} />
+        <Posts posts={posts} />
+        <Footer />
+      </div>
+    );
+  }
+}
 export default Blog;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './styles.scss';
+import './footer.scss';
 
 const Footer = () => {
   const now = new Date();
