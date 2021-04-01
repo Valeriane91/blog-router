@@ -14,23 +14,26 @@ import './header.scss';
   </header>
 ); */
 
-const Header = ({ categories }) => (
+const Header = ({ header, handleClick }) => (
   <header className="menu">
     <nav>
-      {categories.map((category) => (
-        <Header label={category.label} />
-      ))}
-      <button className="menu-btn" type="button">Activer le mode zen</button>
+      <a className="menu-link menu-link--selected" href="">{header.label}</a>
+      <a className="menu-link" href="">{header.label}</a>
+      <a className="menu-link" href="">{header.label}</a>
+      <button
+        className="menu-btn"
+        type="button"
+        onclick={Autre}
+        onChange={(event) => {
+          handleClick(event.target.click, id);
+        }}
+      />
     </nav>
   </header>
 );
 
 Header.propTypes = {
-  // eslint-disable-next-line react/no-unused-prop-types
-  label: PropTypes.string.isRequired,
-};
-Header.propTypes = {
-  categories: PropTypes.arrayOf(
+  header: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
     }).isRequired,

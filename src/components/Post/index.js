@@ -2,7 +2,6 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-
 import './post.scss';
 
 /** const Post = () => (
@@ -12,7 +11,7 @@ import './post.scss';
     <p className="post-excerpt">Lorem ipsuliquid veniam.</p>
   </article>
 ); */
-const Post = ({posts}) => {
+/**const Post = ({posts}) => {
   const postId = `post-${posts.id}`;
 
   return (
@@ -33,6 +32,27 @@ Post.propTypes = {
       excerpt: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
+};
+
+export default Post;*/
+
+const Post = ({id, category, title, excerpt}) => {
+  const postId = `post-${id}`;
+
+  return (
+    <article className="post" htmlFor={postId}>
+      <h2 className="post-title">{title} </h2>
+      <div className="post-category">{category} </div>
+      <p className="post-excerpt">{excerpt} </p>
+    </article>
+  );
+};
+
+Post.propTypes = {
+  id: PropTypes.number.isRequired,
+  category: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  excerpt: PropTypes.string.isRequired,
 };
 
 export default Post;

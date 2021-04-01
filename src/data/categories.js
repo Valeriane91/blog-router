@@ -1,4 +1,5 @@
-export default [
+export default {
+header: [
   {
     route: '/',
     label: 'Accueil',
@@ -19,4 +20,5 @@ export default [
     route: '/autre',
     label: 'Autre',
   },
-];
+]
+};

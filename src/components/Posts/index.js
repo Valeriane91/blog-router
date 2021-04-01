@@ -22,7 +22,7 @@ const Posts = ({ posts }) => (
   </main>
 );
 
-Post.propTypes = {
+Posts.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
